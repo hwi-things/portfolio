@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+	word-break: keep-all;
+}
+html {
+  overflow-y:scroll;
+  overflow-x: hidden;
+}
+body,
+h1,
+h3 p,
+input,
+label {
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+h2, h3, h4, p, a{
+  font-family: "Noto Sans KR", "NotoSans", "Titillium Web", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+.cf::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+img {
+  border: 0;
+}

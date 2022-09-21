@@ -1,0 +1,62 @@
+ol,
+ul {
+  list-style: none;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.progress-bar {
+  position: relative;
+  width: 430px;
+  height: 10px;
+  margin: 3em auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+}
+.progress-bar .bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: rgb(255, 255, 255);
+  border-radius: 25px;
+
+  /* animation: width 3s ; */
+}
+/* @keyframes width{
+    to{
+        width: 60%;
+    }
+} */
+.progress-bar .rate {
+  position: absolute;
+  top: -30px;
+  right: 3px;
+  bottom: 0;
+  line-height: 30px;
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+}
+section {
+  background-color: #ea4343;
+}
+.sills_area {
+  display: flex;
+  justify-content: space-around;
+}
+.skill_name{
+    position: absolute;
+    top: -30px;
+left: 3px;  
+color: #fff;
+}
+h2 {
+  color: #fff;
+  /* height: 800px; */
+  font-size: 3em;
+  padding: 800px 0 100px 0;
+  text-align: center;
+}

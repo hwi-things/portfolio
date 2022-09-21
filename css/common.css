@@ -1,0 +1,17 @@
+
+#wrap {
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 60px;
+}
+.container {
+  /* 0~1400px */
+  max-width: 1200px;
+  height: inherit;
+  margin: auto;
+  font-family: "Noto Sans KR", "Noto Sans", "Titillium Web", sans-serif;
+}
+
+/* contents */
