@@ -1,5 +1,33 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@font-face {
+  font-family: "KoreanNGDE";
+  font-weight: 400;
+  font-style: normal;
+  src: url(../font/new_GothicE.ttf);
+}
+
+@font-face {
+  font-family: "KoreanNGDB";
+  font-weight: 400;
+  font-style: normal;
+  src: url(../font/new_GothicB.ttf);
+}
+
+@font-face {
+  font-family: "KoreanNGDL";
+  font-weight: 400;
+  font-style: normal;
+  src: url(../font/new_GothicL.ttf);
+}
+
+@font-face {
+  font-family: "KoreanNGDM";
+  font-weight: 400;
+  font-style: normal;
+  src: url(../font/new_GothicM.ttf);
+}
 
 * {
   margin: 0;
@@ -8,28 +36,31 @@
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
-	word-break: keep-all;
-  font-family: 'Josefin Sans', sans-serif;
+  word-break: keep-all;
+  font-family: "Josefin Sans", "KoreanNGDM", sans-serif;
+  color: #3c3c3c;
+  text-decoration: none;
+
 }
 html {
-  overflow-y:scroll;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
-body,
+/* body,
 h1,
-h3 p,
+h2,
+h3,
+h4,
+p,
+a,
 input,
 label {
   margin: 0;
   padding: 0;
-  color: #222;
-}
-h2, h3, h4, p, a{
-  font-family: 'Josefin Sans', sans-serif;}
-a {
+  color: #3c3c3c;
+  font-family: "Josefin Sans", "KoreanNGDM", sans-serif;
   text-decoration: none;
-  color: #222;
-}
+} */
 ul,
 li,
 ol {

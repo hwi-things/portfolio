@@ -1,85 +1,242 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>강휘진의 포트폴리오</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-
-    <script src="main.js"></script>
-
-</head>
-<!-- <style>
-    
-    body{
-            background: #F4F5FE url(./Group\ 60.png) no-repeat center top;
-            height: 7218px;
-        }
-    
-</style> -->
-<body>
-<header></header>
-<section class="sec_skills container" >
-    <h2>My skills</h2>
-        <div class="sills_area">
-            <div class="skills_left">
-                <div class="animation">
-                    <div class="progress-bar">
-                        <div class="bar"></div>
-                        <div class="skill_name">HTML</div>
-                        <div class="rate" data-rate="90"></div>
-                    </div>
-                </div>
-                    <div class="progress-bar">
-                        <div class="bar"></div>
-                        <div class="skill_name">CSS</div>
-                        <div class="rate" data-rate="90"></div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="bar"></div>
-                        <div class="skill_name">JavaScript</div>
-                        <div class="rate" data-rate="70"></div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="bar"></div>
-                        <div class="skill_name">jQUERY</div>
-                        <div class="rate" data-rate="75"></div>
-                    </div>
-            </div>
-            <div class="skills_right">
-                <div class="animation">
-                    <div class="progress-bar">
-                        <div class="bar"></div>
-                        <div class="skill_name">SCSS</div>
-
-                        <div class="rate" data-rate="85"></div>
-                    </div>
-                </div>
-                    <div class="progress-bar">
-                        <div class="bar"></div>
-                        <div class="skill_name">React</div>
-
-                        <div class="rate" data-rate="75"></div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="bar"></div>
-                        <div class="skill_name">Photoshop, illustrator</div>
-
-                        <div class="rate" data-rate="80"></div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="bar"></div>
-                        <div class="skill_name">Figma</div>
-                        <div class="rate" data-rate="90"></div>
-                    </div>
-            </div>
+    <script src="js/custom.js"></script>
+  </head>
+  <body>
+    <header>
+      <ul class="gnb">
+        <li><a href="#sec_main">Home</a></li>
+        <li><a href="#sec_profile">About</a></li>
+        <li><a href="#sec_skills">Skills</a></li>
+        <li><a href="#sec_project1">Project</a></li>
+        <li><a href="#footer">Contect</a></li>
+      </ul>
+    </header>
+    <section id="sec_main">
+      <div class="container">
+        <div class="main_left">
+          <div class="lego">
+            <img src="./images/main_lego_left.png" alt="" />
+            <h2>Le</h2>
+            <span>t's </span>
+            <h2>go</h2>
+            <img src="./images/main_lego_right.png" alt="" />
+          </div>
+          <p class="main_subtit_top">어디서나 유의미한 한 조각이 될 퍼블리셔</p>
+          <div class="main_subtit_bottom">
+            <span>강휘진</span>
+            <p>입니다</p>
+            <img src="./images/main_piece.png" alt="" />
+          </div>
+          <div class="button_r">
+            <a href="#">이력서 보기</a>
+            <a href="https://github.com/hwi-things">깃허브 보기</a>
+          </div>
         </div>
-            <h2>project1</h2>
-</section>
-<footer></footer>
-</body>
+        <img class="main_me" src="./images/main_me.png" alt="" />
+      </div>
+      <!-- //container -->
+    </section>
+    <section id="sec_profile">
+      <div class="container">
+        <div class="profile_left"><img src="./images/profile_me.png" alt="" /></div>
+        <p>
+          <div class="profile_right">
+            <h2>
+              안녕하세요 :-) <br />
+              시스템의 한조각이 되고픈 <span>강휘진 </span> 입니다.
+            </h2>
+            <div class="profile_txt_area">
+              <div class="profile_txt_center">
+                <div class="about_me">
+                  <h3>About Me</h3>
+                  <div class="profile_me_txt">
+                    <p>1994.11.01</p>
+                    <p>서울시 구로구 거주</p>
+                    <p>010.3041.7279</p>
+                    <p>hwi_things@naver.com</p>
+                  </div>
+                </div>
+                <div class="education">
+                  <h3>Education</h3>
+                  <div class="profile_edu_area">
+                    <div class="profile_edu_date">
+                      <p>2018.08</p>
+                      <p>2022.08</p>
+                    </div>
+                    <div class="profile_edu_txt">
+                      <p>
+                        상명대학교 한국어문학과 졸업 <br />디지털경영학과 복수전공
+                      </p>
+                      <p>
+                        홍익대학교 영상대학원 <br />
+                        광고브랜드경영학과 재학중
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="profile_txt_right">
+                <div class="license">
+                  <h3>License</h3>
+                  <p>MOS Excel, MOS PowerPoint</p>
+                  <p>자동차 운전면허 1종 보통</p>
+                </div>
+                <div class="history">
+                  <h3>History</h3>
+                  <div class="profile_his_area">
+                    <div class="profile_his_date">
+                      <p>2018</p>
+                      <p>2018</p>
+                      <p>2019</p>
+                      <p>2022</p>
+                    </div>
+                    <div class="profile_his_txt">
+                      <p>~ 2022 커피빈코리아 바리스타 근무</p>
+                      <p>MBC아카데미 영화홍보마케팅 & <br />프로듀서과정 수료</p>
+                      <p>
+                        그린컴퓨터아카데미 광고콘텐츠제작 & 편집디자인 일러스트과정
+                        수료<br />
+                      </p>
+                      <p>
+                        그린컴퓨터아카데미 UI/UX반응형웹디자인 & <br />
+                        웹퍼블리셔 (디자인&코딩)양성과정 수료
+                      </p>
+                    </div>
+                  </div>
+                  <!-- //profile_his_area -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </p>
+      </div>
+      <!-- //container -->
+    </section>
+    <section id="sec_skills">
+      <div class="container">
+        <h2>My skills</h2>
+        <div class="sills_area">
+          <div class="skills_left">
+            <div class="animation">
+              <div class="progress-bar">
+                <div class="bar"></div>
+                <div class="skill_name">HTML</div>
+                <div class="rate" data-rate="90"></div>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="bar"></div>
+              <div class="skill_name">CSS</div>
+              <div class="rate" data-rate="90"></div>
+            </div>
+            <div class="progress-bar">
+              <div class="bar"></div>
+              <div class="skill_name">JavaScript</div>
+              <div class="rate" data-rate="70"></div>
+            </div>
+            <div class="progress-bar">
+              <div class="bar"></div>
+              <div class="skill_name">jQUERY</div>
+              <div class="rate" data-rate="75"></div>
+            </div>
+          </div>
+          <div class="skills_right">
+            <div class="animation">
+              <div class="progress-bar">
+                <div class="bar"></div>
+                <div class="skill_name">SCSS</div>
+                <div class="rate" data-rate="85"></div>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="bar"></div>
+              <div class="skill_name">React</div>
+              <div class="rate" data-rate="75"></div>
+            </div>
+            <div class="progress-bar">
+              <div class="bar"></div>
+              <div class="skill_name">Photoshop, illustrator</div>
+              <div class="rate" data-rate="80"></div>
+            </div>
+            <div class="progress-bar">
+              <div class="bar"></div>
+              <div class="skill_name">Figma</div>
+              <div class="rate" data-rate="90"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //container -->
+    </section>
+    <section id="sec_project1">
+      <div class="container">
+        <div class="project1_left">
+          <h2 class="project_tit">PROJECT_01</h2>
+          <p>※마우스를 올리면 화면이 움직입니다.</p>
+          <img src="./images/k-water_pc.png" alt="" />
+        </div>
+        <div class="project1_right">
+          <h3>한국수자원공사</h3>
+          <p>
+            무에서 유를 창조하는 자세로 진행했던 프로젝트 입니다. <br />
+            와이어프레임부터 시작하여 css, 스크립트까지 적용하며 가장 많은 배움을
+            준 프로젝트입니다. <br />
+            모바일 적응형 페이지를 따로 구현하였고, PC와 테블릿까지는 반응형으로
+            구현하였습니다.
+          </p>
+          <p>HTML / CSS / Javascript / jQuery</p>
+          <p><span>제작기간</span> 4주 <span>기여도</span> 100%</p>
+          <ul class="button_w"><li><a href="#">MOBILE_적응형</a></li>
+          <li><a href="#">SUB_PAGE</a></li></ul>
+          <ul class="button_r"><li><a href="#">사이트 보기 </a></li>
+          <li><a href="#">깃허브 보기</a></li>
+          <li><a href="#">기획서 보기</a></li></ul>
+        </div>
+      </div>
+      <!-- //container -->
+    </section>
+    <section id="sec_project2">
+      <div class="container"></div>
+      <!-- //container -->
+    </section>
+    <section id="sec_project3">
+      <div class="container"></div>
+      <!-- //container -->
+    </section>
+    <section id="sec_project4">
+      <div class="container"></div>
+      <!-- //container -->
+    </section>
+    <section id="sec_project5">
+      <div class="container"></div>
+      <!-- //container -->
+    </section>
+
+    <footer id="footer ">
+      <div class="container">
+        <h2>Contect me</h2>
+        <p>저의 포트폴리오를 봐주셔서 감사합니다.</p>
+        <p>견고하게 커리어를 쌓아 올라는 퍼블리셔로 성장하겠습니다.</p>
+        <p>
+          어떤 시스템에도 유의미하게 결합하는 ‘강휘진’이란 조각을 기억해주세요!
+        </p>
+      </div>
+      <!-- //container -->
+    </footer>
+    <p class="to_top">
+      <a href="#sec_main" id="to_top" class="s_point"
+        ><img src="./images/top.png" alt=""
+      /></a>
+    </p>
+  </body>
 </html>

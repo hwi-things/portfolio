@@ -7,11 +7,12 @@ header {
   height: 60px;
 }
 .container {
-  /* 0~1400px */
-  max-width: 1200px;
+  max-width: 1400px;
   height: inherit;
   margin: auto;
   font-family: "Noto Sans KR", "Noto Sans", "Titillium Web", sans-serif;
 }
-
+section{
+  height: 100vh;
+}
 /* contents */
