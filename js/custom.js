@@ -14,7 +14,6 @@ $(function(){
 })
 
 
-
 // skills
 
 $(function () {
