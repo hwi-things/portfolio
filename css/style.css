@@ -1,12 +1,18 @@
 /* header */
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
-  height: 70px;
+  z-index: 2;
+  padding: 1em 1.4em;
   width: 100%;
+  /* height: 70px; */
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+}
+header.sticky {
+  position: fixed;
+  z-index: 222;
 }
 .gnb {
   display: flex;
@@ -15,6 +21,37 @@ header {
   height: 70px;
   max-width: 1200px;
   margin: auto;
+}
+.gnb li {
+  padding: 1em 1.4em;
+
+  position: relative;
+}
+
+.gnb li a:before,
+.gnb li a:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+.gnb li a:before {
+  top: 0;
+  transform-origin: left;
+}
+.gnb li a:after {
+  bottom: 0;
+  transform-origin: right;
+}
+.gnb li.on a:before,
+.gnb li a:hover:before,
+.gnb li.on a:after,
+.gnb li a:hover:after {
+  transform: scaleX(1);
 }
 
 /* sec_main */
@@ -89,11 +126,9 @@ header {
   0% {
     transform: scale(1);
   }
-  /* 25%{transform: scale(1.5);} */
   50% {
     transform: scale(1.7);
   }
-  /* 75%{transform: scale(1.5);} */
   100% {
     transform: scale(1);
   }
@@ -120,7 +155,7 @@ left: 0;
   padding: 0px;
 }
 .main_me {
-  z-index: 999;
+  z-index: 221;
 }
 #sec_main p {
   font-family: "KoreanNGDM";
@@ -344,13 +379,7 @@ left: 0;
   width: 0;
   background: rgb(255, 255, 255);
   border-radius: 25px;
-  /* animation: width 3s ; */
 }
-/* @keyframes width{
-    to{
-        width: 60%;
-    }
-} */
 .progress-bar .rate {
   position: absolute;
   top: -30px;
@@ -360,10 +389,41 @@ left: 0;
   font-size: 1em;
   color: rgb(255, 255, 255);
 }
+
+
+
 /* sec_project1 */
 #sec_project1 {
   background-color: #f4f5fe;
+  position: relative;
 }
+#sec_project1 .project_left{
+  position: relative;
+  left: -80%;
+  transition: all 3s ease-in-out;
+padding-right: 50px;
+}
+#sec_project1.on .project_left{
+  left: 0;
+}
+#sec_project1 .project_right{
+  position: relative;
+  right: -80%;
+  padding-left: 50px;
+
+}
+#sec_project1.on .project_right{
+  right: 0;
+animation: fade 4s ease-in;
+}
+@keyframes fade{
+  from{opacity: 0%;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+
 .project_tit {
   font-size: 45px;
   font-style: normal;
@@ -377,37 +437,73 @@ left: 0;
 .project_tit + p {
   color: #7d7789;
 }
-#sec_project1 img {
-  width: 40vw;
+.thumbnail_area {
   position: relative;
-  left: -113px;
-  top: -37px;
 }
-#sec_project1 .container {
+.project_left .pc {
+  width: 500px;
+}
+.project_left .ipad {
+  position: absolute;
+  width: 300px;
+  top: 49%;
+  left: 54%;
+}
+.project_left .mobile {
+  position: absolute;
+  width: 120px;
+  top: 52%;
+  left: -9%;
+}
+.project_area {
   display: flex;
+  justify-content: space-between;
 }
-.project1_left,
-.project1_right {
+.project_left,.project_right{
   padding-top: 200px;
+  max-width: 700px;
 }
-.project1_right h3 {
+.project_left{
+  width: 700px;
+}
+.project_right{
+  width: 600px;
+
+}
+.project_right h3 {
   font-family: "KoreanNGDE";
   font-weight: 400;
   font-size: 30px;
-  line-height: 70px;
+  padding-top: 50px;
 }
-.project1_right p:nth-child(3),
-.project1_right p:nth-child(4) {
+.project_right p:nth-child(3),
+.project_right p:nth-child(4) {
   font-family: "KoreanNGDB";
   font-size: 16px;
   line-height: 30px;
 }
-.project1_right span {
+.project_right span {
   font-family: "KoreanNGDE";
+}
+.project_txt {
+  line-height: 30px;
+  color: #7d7789;
+  margin: 30px 0;
+}
+.icon {
+  display: flex;
+  margin-top: 10px;
+}
+.icon li {
+  margin-right: 20px;
 }
 /* sec_project2 */
 #sec_project2 {
   background-color: #f4f5fe;
+}
+#sec_project2 .project_tit,
+#sec_project2 .project_tit + p {
+  text-align: right;
 }
 /* sec_project3 */
 #sec_project3 {
@@ -417,16 +513,79 @@ left: 0;
 /* sec_project4 */
 #sec_project4 {
   background-color: #ea4343;
+  position: relative;
+}
+#sec_project4 h3{
+  color: #FFFFFF;
+}
+#sec_project4 .project_txt{
+  color: #F5F5F5;
+}
+#sec_project4::before{
+  content: '';
+  position: absolute;
+  top: 54%;
+  left: -20%;
+width: 260px;
+height: 350px;
+box-sizing: border-box;
+border: 6px solid #FFFFFF;
+border-radius: 0px;
+transition: all 0.6s ease-in;
+
+}
+#sec_project4.on::before{
+left: -2%;
 }
 
 /* sec_project5 */
 #sec_project5 {
   background-color: #f4f5fe;
+  display: none;
+}
+#sec_project5 .project_tit,
+#sec_project5 .project_tit + p {
+  text-align: right;
 }
 
 /* footer */
 footer {
+  background-color: #f4f5fe;
+  
+}
+footer .container{
+  text-align: center;
+}
+footer .container h2{
+  letter-spacing: 3.2px;
+  font-weight: 700;
+font-size: 32px;
+line-height: 31px;
+padding-top: 100px;
+padding: 100px 0 50px 0;
+}
+footer .container p{
+  font-size: 20px;
+  line-height: 50px;
+
+}
+footer .container .button_r{
+  justify-content: center;
+
+}
+.footer_bottom{
   background-color: rgba(60, 60, 60, 0.6);
+  height: 270px;
+}
+.footer_box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+.footer_box li{
+  width: 214px;
+height: 65px;
+  background: rgba(109, 107, 111, 0.4);
 }
 
 /* top */
@@ -445,4 +604,14 @@ footer {
 }
 #to_top.visible {
   opacity: 1;
+}
+
+
+
+
+.box {
+  position: fixed;
+  font-size: 3em;
+  z-index: 999;
+  
 }

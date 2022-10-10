@@ -10,10 +10,89 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
+    <script src="js/modernizr-custom.js"></script>
     <script src="js/custom.js"></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
+    <div class="box"></div>
+
     <header>
       <ul class="gnb">
         <li><a href="#sec_main">Home</a></li>
@@ -23,7 +102,7 @@
         <li><a href="#footer">Contect</a></li>
       </ul>
     </header>
-    <section id="sec_main">
+    <section class="section" id="sec_main">
       <div class="container">
         <div class="main_left">
           <div class="lego">
@@ -48,84 +127,84 @@
       </div>
       <!-- //container -->
     </section>
-    <section id="sec_profile">
+    <section class="section" id="sec_profile">
       <div class="container">
-        <div class="profile_left"><img src="./images/profile_me.png" alt="" /></div>
-        <p>
-          <div class="profile_right">
-            <h2>
-              안녕하세요 :-) <br />
-              분리와 결합이 자유로운 
-              <span>강휘진 </span> 입니다.
-            </h2>
-            <div class="profile_txt_area">
-              <div class="profile_txt_center">
-                <div class="about_me">
-                  <h3>About Me</h3>
-                  <div class="profile_me_txt">
-                    <p>1994.11.01</p>
-                    <p>서울시 구로구 거주</p>
-                    <p>010.3041.7279</p>
-                    <p>hwi_things@naver.com</p>
-                  </div>
-                </div>
-                <div class="education">
-                  <h3>Education</h3>
-                  <div class="profile_edu_area">
-                    <div class="profile_date">
-                      <p>2018.08</p>
-                      <p>2022.08</p>
-                    </div>
-                    <div class="profile_edu_txt">
-                      <p>
-                        상명대학교 한국어문학과 졸업 <br />디지털경영학과 복수전공
-                      </p>
-                      <p>
-                        홍익대학교 영상대학원 <br />
-                        광고브랜드경영학과 재학중
-                      </p>
-                    </div>
-                  </div>
+        <div class="profile_left">
+          <img src="./images/profile_me.png" alt="" />
+        </div>
+        <div class="profile_right">
+          <h2>
+            안녕하세요 :-) <br />
+            분리와 결합이 자유로운
+            <span>강휘진 </span> 입니다.
+          </h2>
+          <div class="profile_txt_area">
+            <div class="profile_txt_center">
+              <div class="about_me">
+                <h3>About Me</h3>
+                <div class="profile_me_txt">
+                  <p>1994.11.01</p>
+                  <p>서울시 구로구 거주</p>
+                  <p>010.3041.7279</p>
+                  <p>hwi_things@naver.com</p>
                 </div>
               </div>
-              <div class="profile_txt_right">
-                <div class="license">
-                  <h3>License</h3>
-                  <p>MOS Excel, MOS PowerPoint</p>
-                  <p>자동차 운전면허 1종 보통</p>
-                </div>
-                <div class="history">
-                  <h3>History</h3>
-                  <div class="profile_his_area">
-                    <div class="profile_date">
-                      <p>2018</p>
-                      <p>2018</p>
-                      <p>2019</p>
-                      <p>2022</p>
-                    </div>
-                    <div class="profile_his_txt">
-                      <p>~ 2022 커피빈코리아 바리스타 근무</p>
-                      <p>MBC아카데미 영화홍보마케팅 & <br />프로듀서과정 수료</p>
-                      <p>
-                        그린컴퓨터아카데미 광고콘텐츠제작 & <br />편집디자인 일러스트과정
-                        수료
-                      </p>
-                      <p>
-                        그린컴퓨터아카데미 UI/UX반응형웹디자인 & <br />
-                        웹퍼블리셔 (디자인&코딩)양성과정 수료
-                      </p>
-                    </div>
+              <div class="education">
+                <h3>Education</h3>
+                <div class="profile_edu_area">
+                  <div class="profile_date">
+                    <p>2018.08</p>
+                    <p>2022.08</p>
                   </div>
-                  <!-- //profile_his_area -->
+                  <div class="profile_edu_txt">
+                    <p>
+                      상명대학교 한국어문학과 졸업 <br />디지털경영학과 복수전공
+                    </p>
+                    <p>
+                      홍익대학교 영상대학원 <br />
+                      광고브랜드경영학과 재학중
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="profile_txt_right">
+              <div class="license">
+                <h3>License</h3>
+                <p>MOS Excel, MOS PowerPoint</p>
+                <p>자동차 운전면허 1종 보통</p>
+              </div>
+              <div class="history">
+                <h3>History</h3>
+                <div class="profile_his_area">
+                  <div class="profile_date">
+                    <p>2018</p>
+                    <p>2018</p>
+                    <p>2019</p>
+                    <p>2022</p>
+                  </div>
+                  <div class="profile_his_txt">
+                    <p>~ 2022 커피빈코리아 바리스타 근무</p>
+                    <p>MBC아카데미 영화홍보마케팅 & <br />프로듀서과정 수료</p>
+                    <p>
+                      그린컴퓨터아카데미 광고콘텐츠제작 & <br />편집디자인
+                      일러스트과정 수료
+                    </p>
+                    <p>
+                      그린컴퓨터아카데미 UI/UX반응형웹디자인 & <br />
+                      웹퍼블리셔 (디자인&코딩)양성과정 수료
+                    </p>
+                  </div>
+                </div>
+                <!-- //profile_his_area -->
+              </div>
+            </div>
           </div>
-        </p>
+        </div>
       </div>
       <!-- //container -->
     </section>
-    <section id="sec_skills">
+    <section class="section" id="sec_skills">
       <div class="container">
         <h2>My skills</h2>
         <div class="sills_area">
@@ -181,51 +260,169 @@
       </div>
       <!-- //container -->
     </section>
-    <section id="sec_project1">
-      <div class="container">
-        <div class="project1_left">
+    <section class="section" id="sec_project1">
+      <div class="container project_area">
+        <div class="project_left">
           <h2 class="project_tit">PROJECT_01</h2>
           <p>※마우스를 올리면 화면이 움직입니다.</p>
-          <img src="./images/k-water_pc.png" alt="" />
+          <div class="thumbnail_area">
+            <img class="pc" src="./images/k-water_pc.png" alt="" />
+            <img class="ipad" src="./images/k-water_ipad.png" alt="" />
+            <img class="mobile" src="./images/k-water_mobile.png" alt="" />
+          </div>
         </div>
-        <div class="project1_right">
+        <div class="project_right">
           <h3>한국수자원공사</h3>
-          <p>
+          <p class="project_txt">
             무에서 유를 창조하는 자세로 진행했던 프로젝트 입니다. <br />
-            와이어프레임부터 시작하여 css, 스크립트까지 적용하며 가장 많은 배움을
-            준 프로젝트입니다. <br />
+            와이어프레임부터 시작하여 css, 스크립트까지 적용하며 가장 많은
+            배움을 준 프로젝트입니다. <br />
             모바일 적응형 페이지를 따로 구현하였고, PC와 테블릿까지는 반응형으로
             구현하였습니다.
           </p>
           <p>HTML / CSS / Javascript / jQuery</p>
           <p><span>제작기간</span> 4주 <span>기여도</span> 100%</p>
-          <ul class="button_w"><li><a href="#">MOBILE_적응형</a></li>
-          <li><a href="#">SUB_PAGE</a></li></ul>
-          <ul class="button_r"><li><a href="#">사이트 보기 </a></li>
-          <li><a href="#">깃허브 보기</a></li>
-          <li><a href="./pdf/K-water_plan.pdf">기획서 보기</a></li></ul>
+          <ul class="icon">
+            <li><img src="./images/icon_chrome.png" alt="" /></li>
+            <li><img src="./images/icon_firefox.png" alt="" /></li>
+            <li><img src="./images/icon_ie9.png" alt="" /></li>
+          </ul>
+
+          <ul class="button_w">
+            <li><a href="#">MOBILE_적응형</a></li>
+            <li><a href="#">SUB_PAGE</a></li>
+          </ul>
+          <ul class="button_r">
+            <li><a href="#">사이트 보기 </a></li>
+            <li><a href="#">깃허브 보기</a></li>
+            <li><a href="./pdf/K-water_plan.pdf">기획서 보기</a></li>
+          </ul>
         </div>
       </div>
       <!-- //container -->
     </section>
-    <section id="sec_project2">
-      <div class="container"></div>
-      <!-- //container -->
-    </section>
-    <section id="sec_project3">
-      <div class="container"></div>
-      <!-- //container -->
-    </section>
-    <section id="sec_project4">
-      <div class="container"></div>
-      <!-- //container -->
-    </section>
-    <section id="sec_project5">
-      <div class="container"></div>
-      <!-- //container -->
-    </section>
+    <section class="section" id="sec_project2">
+      <div class="container project_area">
+        <div class="project_right">
+          <h3>라네즈</h3>
+          <p class="project_txt">
+            반응형으로 제작한 사이트 입니다. 이 프로젝트를 통해 다양한
+            미디어에서 활용가능한 사이트를 구현하는 것에 대한 중요성을 알게
+            되었습니다. <br />
+            HTML과 CSS가 손에 익어가는 것을 체험하며 성취감을 느낄 수
+            있었습니다. <br />
+            Javascript를 이용하여 다양한 효과를 주어 동적인 효과를 더했습니다.
+          </p>
+          <p>HTML / CSS / Javascript / jQuery</p>
+          <p><span>제작기간</span> 2주 <span>기여도</span> 100%</p>
+          <ul class="icon">
+            <li><img src="./images/icon_chrome.png" alt="" /></li>
+            <li><img src="./images/icon_firefox.png" alt="" /></li>
+            <li><img src="./images/icon_ie9.png" alt="" /></li>
+          </ul>
 
-    <footer id="footer ">
+          <ul class="button_w">
+            <li>
+              <a href="https://hwi-things.github.io/laneige/">MOBILE_반응형</a>
+            </li>
+            <li>
+              <a href="https://hwi-things.github.io/laneige/sub_page/index.html"
+                >SUB_PAGE</a
+              >
+            </li>
+          </ul>
+          <ul class="button_r">
+            <li>
+              <a href="https://hwi-things.github.io/laneige/">사이트 보기 </a>
+            </li>
+            <li><a href="#">깃허브 보기</a></li>
+            <!-- <li><a href="./pdf/K-water_plan.pdf">기획서 보기</a></li> -->
+          </ul>
+        </div>
+        <div class="project_left">
+          <h2 class="project_tit">PROJECT_02</h2>
+          <p>※마우스를 올리면 화면이 움직입니다.</p>
+          <div class="thumbnail_area">
+            <img class="pc" src="./images/laneige_pc.png" alt="" />
+            <img class="mobile" src="./images/laneige_mobile.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- //container -->
+    </section>
+    <section class="section" id="sec_project3">
+      <div class="container project_area">
+        <div class="project_left">
+          <h2 class="project_tit">PROJECT_03</h2>
+          <p>※마우스를 올리면 화면이 움직입니다.</p>
+          <div class="thumbnail_area">
+            <img class="pc" src="./images/magazine-B_pc.png" alt="" />
+            <img class="mobile" src="./images/magazine-B_mobile.png" alt="" />
+          </div>
+        </div>
+        <div class="project_right">
+          <h3>Magazine-B</h3>
+          <p class="project_txt">
+            SCSS를 사용하여 구현한 웹사이트입니다. SCSS 덕분에 작업시간이 단축할 수 있었습니다. 기존 사이트에 부족하다고 느낀 반응형 구성을 추가하여 보완하였습니다.
+            평소 즐겨 읽던 매거진의 메인페이지를 직접 제작할 수 있어 뜻깊었습니다.
+          </p>
+          <p>HTML / CSS / Javascript / jQuery</p>
+          <p><span>제작기간</span> 4주 <span>기여도</span> 100%</p>
+          <ul class="icon">
+            <li><img src="./images/icon_chrome.png" alt="" /></li>
+            <li><img src="./images/icon_firefox.png" alt="" /></li>
+            <li><img src="./images/icon_ie9.png" alt="" /></li>
+          </ul>
+
+          <ul class="button_w">
+            <li><a href="#">MOBILE_적응형</a></li>
+            <li><a href="#">SUB_PAGE</a></li>
+          </ul>
+          <ul class="button_r">
+            <li><a href="#">사이트 보기 </a></li>
+            <li><a href="#">깃허브 보기</a></li>
+            <li><a href="./pdf/K-water_plan.pdf">기획서 보기</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- //container -->
+    </section>
+    <section class="section" id="sec_project4">
+      <div class="container project_area">
+        <div class="project_left">
+          <h2 class="project_tit">PROJECT_04</h2>
+          <p>※마우스를 올리면 화면이 움직입니다.</p>
+          <div class="thumbnail_area">
+            <img class="pc" src="./images/k-water_pc.png" alt="" />
+            <img class="ipad" src="./images/k-water_ipad.png" alt="" />
+            <img class="mobile" src="./images/k-water_mobile.png" alt="" />
+          </div>
+        </div>
+        <div class="project_right">
+          <h3>ReaDream <span>(읽어드림)</span></h3>
+          <p class="project_txt">
+            팀 단위로 진행한 앱 개발 프로젝트 입니다. Figma를 사용하여 제작한
+            프로토타입앱으로, UI/UX에 대해 배운것을 직접 적용해볼 수 있는
+            과정이었습니다. 시간에 쫓기는 현대인들을 위한 일상에서 남는 시간을
+            활용할 수 있는 오디오북 앱 입니다. 기존 오디오북의 단점을 보완하는
+            생동감있는 성우기능과 빅데이터를 활용한 회원 맞춤형 추천 시스템을
+            갖춘 앱을 비주얼적으로 구현했습니다. 팀장으로 프로젝트를 수행하며
+            다시금 협력과 책임감에 대하여 배우는 기간이었습니다.
+          </p>
+          <p><span>제작기간</span>2주</p>
+          <ul class="button_w">
+            <li><a href="#">기획서 보기</a></li>
+            <li><a href="#">프로토타입 보기</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- //container -->
+    </section>
+    <section class="section" id="sec_project5">
+      <div class="container project_area"></div>
+      <!-- //container -->
+    </section>
+    <footer class="section" id="footer ">
       <div class="container">
         <h2>Contect me</h2>
         <p>저의 포트폴리오를 봐주셔서 감사합니다.</p>
@@ -233,13 +430,29 @@
         <p>
           어떤 시스템에도 유의미하게 결합하는 ‘강휘진’이란 조각을 기억해주세요!
         </p>
+        <ul class="button_r">
+          <li><a href="#">이력서 보기 </a></li>
+          <li><a href="#">깃허브 보기</a></li>
+        </ul>
+
       </div>
       <!-- //container -->
+  <ul class="footer_box">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+  </ul>
+  
+      <div class="footer_bottom">
+
+      </div>
     </footer>
     <p class="to_top">
       <a href="#sec_main" id="to_top" class="s_point"
         ><img src="./images/top.png" alt=""
       /></a>
     </p>
+
   </body>
 </html>
