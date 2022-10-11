@@ -856,8 +856,8 @@ footer span + p {
   opacity: 1;
 }
 
-.box {
+/* .box {
   position: fixed;
   font-size: 3em;
   z-index: 999;
-}
+} */
