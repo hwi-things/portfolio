@@ -123,14 +123,17 @@ $(function () {
     
     $(window).scroll(function () {
       var sct = $(window).scrollTop();
-      if (sct >= 6000) {
-        $("#sec_project4").addClass("on");
+      if (sct >= 550) {
+        $(".right1").addClass("on");
+      }
+      if (sct >= 600) {
+        $(".profile_left").addClass("on");
       }
       if (sct >= 2750) {
         $("#sec_project1").addClass("on");
       }
-      if (sct >= 550) {
-        $(".right1").addClass("on");
+      if (sct >= 5700) {
+        $("#sec_project4").addClass("on");
       }
     });
   });
