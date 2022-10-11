@@ -56,7 +56,7 @@ header.sticky {
 
 /* sec_main */
 #sec_main {
-  background-color: #f4f5fe;
+  background: #f4f5fe;
 }
 #sec_main::after {
   content: "";
@@ -82,32 +82,54 @@ header.sticky {
 #sec_main .container {
   display: flex;
   justify-content: space-around;
+  position: relative;
+}
+#sec_main .container::before {
+  position: absolute;
+  left: 101%;
+  top: 76%;
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: url(../images/main_lego_bg4.png) no-repeat;
+  background-size: contain;
+  animation: 3s linear 1s infinite alternate rotate;
+}
+@keyframes rotate {
+  from {
+    rotate: 90deg;
+  }
+  to {
+    rotate: -100deg;
+  }
 }
 #sec_main .container::after {
   position: absolute;
   content: "";
-  width: 489px;
-  height: 489px;
-  left: 64%;
+  width: 600px;
+  height: 600px;
+  left: 57%;
   top: 208px;
   border: 6px solid #ea4343;
 }
 #sec_main .main_subtit_top::after {
   content: "";
   position: absolute;
-  width: 260px;
-  height: 375px;
+  width: 290px;
+  height: 405px;
   right: 0;
   top: 0px;
-  background: rgba(217, 217, 217, 0.6);
-  animation: 3s linear 1s infinite alternate main_right;
+  /* background: rgba(217, 217, 217, 0.6); */
+  background: url(../images/main_lego_bg2.png) no-repeat;
+  background-size: contain;
+  animation: 2s linear 1s infinite alternate main_right;
 }
 @keyframes main_right {
   from {
-    right: -10%;
+    right: -40%;
   }
   to {
-    right: 3%;
+    right: -20%;
   }
 }
 .main_left h2 {
@@ -187,22 +209,6 @@ left: 0;
 .button_w {
   display: flex;
 }
-.button_r a {
-  display: inline-block;
-  width: 110px;
-  height: 35px;
-  border-radius: 35px;
-  background: #ea4343;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  font-family: "KoreanNGDM";
-  font-size: 14px;
-  line-height: 35px;
-  text-align: center;
-  letter-spacing: 1.5px;
-  margin-right: 20px;
-  margin-top: 20px;
-}
 .button_w a {
   display: inline-block;
   width: 130px;
@@ -218,16 +224,93 @@ left: 0;
   margin-right: 20px;
   margin-top: 20px;
   border: 1px solid #ea4343;
+  z-index: 9;
+  position: relative;
+}
+
+.button_r a {
+  display: inline-block;
+  width: 110px;
+  height: 35px;
+  border-radius: 35px;
+  background: #ea4343;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-family: "KoreanNGDM";
+  font-size: 14px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin-right: 20px;
+  margin-top: 20px;
+  z-index: 9;
+  position: relative;
+  border: 1px solid #ea4343;
+}
+
+.button_r a:hover {
+  animation: to-lego 1s ease;
+  animation-fill-mode: both;
+}
+.button_w a:hover {
+  animation: to-lego 1s ease;
+  animation-fill-mode: both;
+  background: #ea4343;
+  color: #fff;
+}
+@keyframes to-lego {
+  from {
+    border-radius: 35px;
+  }
+  to {
+    border-radius: 0;
+  }
+}
+.button_r a:before,
+.button_r a:after,
+.button_w a:before,
+.button_w a:after {
+  width: 30px;
+  height: 8px;
+  position: absolute;
+  top: -9px;
+  content: "";
+  display: inline-block;
+  background: #ea4343;
+  transition: transform 1s ease;
+  transform: translateY(9px) scale(0);
+  z-index: -1;
+}
+.button_r a:before,
+.button_w a:before {
+  top: -25%;
+  left: 15%;
+}
+
+.button_r a:after,
+.button_w a:after {
+  bottom: -25%;
+  right: 15%;
+}
+
+.button_r a:hover:before,
+.button_r a:hover:after,
+.button_w a:hover:before,
+.button_w a:hover:after {
+  transform: none;
 }
 
 #sec_main .button_r::after {
   content: "";
   position: absolute;
-  width: 71px;
-  height: 120px;
-  left: 61%;
-  top: 173px;
-  background: rgba(160, 160, 160, 0.6);
+  width: 90px;
+  height: 90px;
+  left: 46%;
+  top: 14%;
+  background: url(../images/main_lego_bg5.png) no-repeat;
+  background-size: contain;
+  animation: 3s linear 1s infinite alternate rotate;
+  /* background: rgba(160, 160, 160, 0.6); */
 }
 /* sec_profile */
 #sec_profile {
@@ -253,12 +336,28 @@ left: 0;
   margin-top: 19vh;
   margin-right: 50px;
   position: relative;
-  left: -80%;
-  transition: all 2s 0.2s cubic-bezier(0.5, 1.02, 1, 1);
-
+  left: -3%;
+  transition: all 1.5s cubic-bezier(0.5, 1.02, 1, 1);
 }
-.profile_left.on{
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.profile_left.on {
   left: 0;
+  animation: fade-in 1s ease-in;
+}
+.profile_right.on {
+  animation: fade-in 1s ease-in;
+  right: 0;
+}
+.profile_right {
+  position: relative;
+  right: -3%;
 }
 .profile_left img {
   width: 100%;
@@ -272,7 +371,8 @@ left: 0;
   left: -58%;
   top: -12%;
   border: 6px solid #ffffff;
-  z-index: 1;}
+  z-index: 1;
+}
 
 .profile_box2 {
   position: absolute;
@@ -281,28 +381,31 @@ left: 0;
   left: -34%;
   top: 68%;
   background: #ea4343;
-  z-index: 7;}
+  z-index: 7;
+}
 .profile_txt_center,
 .profile_txt_right {
   width: 50%;
 }
 #sec_profile .profile_right h2 {
-  margin: 180px 0 80px 0;
-  font-size: 21px;
+  margin: 100px 0 70px 0;
+  font-size: 23px;
   color: rgba(255, 255, 255, 0.8);
   font-family: "KoreanNGDL";
   font-weight: 400;
-  line-height: 30px;
+  line-height: 42px;
   letter-spacing: 1px;
 }
 .profile_right h2 span {
   font-family: "KoreanNGDM";
-  font-size: 25px;
+  font-size: 30px;
   line-height: 35px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ea4343;
   letter-spacing: 1.5px;
 }
-
+.profile_right h2 span:last-child {
+  color: rgba(255, 255, 255, 0.8);
+}
 .profile_txt_center h3,
 .profile_txt_right h3 {
   font-weight: 600;
@@ -402,12 +505,13 @@ left: 0;
 }
 #sec_project1 .project_left {
   position: relative;
-  left: -80%;
-  transition: all 3s ease-in-out;
+  left: -5%;
+  transition: all 1s ease-in-out;
   padding-right: 50px;
 }
 #sec_project1.on .project_left {
   left: 0;
+  animation: fade-in 1s ease-in;
 }
 #sec_project1 .project_right {
   position: relative;
@@ -416,7 +520,7 @@ left: 0;
 }
 #sec_project1.on .project_right {
   right: 0;
-  animation: fade 4s ease-in;
+  animation: fade 2s ease-in;
 }
 @keyframes fade {
   from {
@@ -455,9 +559,9 @@ left: 0;
 .project_left .mobile {
   position: absolute;
   width: 120px;
-  top: 52%;
-  left: -9%;
+  top: 49%;
 }
+
 .project_area {
   display: flex;
   justify-content: space-between;
@@ -500,6 +604,33 @@ left: 0;
 .icon li {
   margin-right: 20px;
 }
+#sec_project1 .frame_mobile img {
+  position: absolute;
+  width: 100%;
+  transition-property: top;
+  transition-duration: 5s;
+}
+#sec_project1 .frame_mobile {
+  position: absolute;
+  max-width: 120px;
+  width: 100%;
+  top: 52%;
+  left: -9%;
+  transition-duration: 5s;
+}
+
+#sec_project1 .frame_mobile .hidden {
+  width: 90px;
+  height: 197px;
+  top: 14px;
+  left: 15px;
+  position: absolute;
+  display: block;
+  background: tomato;
+  overflow: hidden;
+  border-radius: 9px;
+}
+
 /* sec_project2 */
 #sec_project2 {
   background-color: #f4f5fe;
@@ -508,33 +639,85 @@ left: 0;
 #sec_project2 .project_tit + p {
   text-align: right;
 }
+
+#sec_project2 .project_left {
+  position: relative;
+  right: -5%;
+  transition: all 1s ease-in-out;
+  padding-right: 50px;
+}
+#sec_project2.on .project_left {
+  right: 0;
+  animation: fade-in 1s ease-in;
+}
+#sec_project2 .project_right {
+  position: relative;
+  left: -80%;
+  padding-left: 50px;
+}
+#sec_project2.on .project_right {
+  left: 0;
+  animation: fade 2s ease-in;
+}
+
+#sec_project2 .thumbnail_area {
+  text-align: right;
+}
+#sec_project2 .thumbnail_area .mobile {
+  top: 47%;
+  left: 22%;
+}
+
 /* sec_project3 */
 #sec_project3 {
   background-color: #f4f5fe;
 }
-#sec_project2 .thumbnail_area{
-  text-align: right;
+
+#sec_project3 .project_left {
+  position: relative;
+  left: -5%;
+  transition: all 1s ease-in-out;
+  padding-right: 50px;
 }
-#sec_project2 .thumbnail_area .mobile{
-  top: 47%;
-  left: 22%;
+#sec_project3.on .project_left {
+  left: 0;
+  animation: fade-in 1s ease-in;
 }
+#sec_project3 .project_right {
+  position: relative;
+  right: -80%;
+  padding-left: 50px;
+}
+#sec_project3.on .project_right {
+  right: 0;
+  animation: fade 2s ease-in;
+}
+
+#sec_project3 .project_left .mobile {
+  left: 64%;
+}
+
 /* sec_project4 */
 #sec_project4 {
   background-color: #ea4343;
   position: relative;
 }
-#sec_project4 .thumbnail_area .mobile:first-child{
+#sec_project4 .thumbnail_area .mobile:first-child {
   width: 45%;
-  margin-left: 35%;
+  margin-left: 42%;
 }
-#sec_project4 .thumbnail_area .mobile:last-child{
-  width: 25%;
-  margin-top: 36%;
+#sec_project4 .thumbnail_area .mobile:last-child {
+  width: 32%;
+  margin-top: 16%;
   left: -6%;
 }
 #sec_project4 h3 {
   color: #ffffff;
+}
+#sec_project4 h3 span {
+  color: #ffffff;
+  font-size: 23px;
+  font-family: "KoreanNGDM";
 }
 #sec_project4 .project_txt {
   color: #f5f5f5;
@@ -553,6 +736,18 @@ left: 0;
 }
 #sec_project4.on::before {
   left: -1%;
+}
+
+#sec_project4 .button_w a:hover {
+  animation: to-lego 1s ease;
+  animation-fill-mode: both;
+  background: #ffffff;
+  color: #3c3c3c;
+}
+
+#sec_project4 .button_w a:before,
+#sec_project4 .button_w a:after {
+  background: #ffffff;
 }
 
 /* sec_project5 */
@@ -590,6 +785,47 @@ footer .container .button_r {
 .footer_bottom {
   background-color: rgba(60, 60, 60, 0.6);
   height: 270px;
+  padding: 0 9%;
+  display: flex;
+}
+footer span {
+  letter-spacing: 0.2px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 31px;
+  color: #ffffff;
+}
+footer span + p {
+  letter-spacing: 0.2px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #ea4343;
+}
+.name p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: "KoreanNGDM";
+}
+.name img {
+  margin: 50px 0 70px 0;
+}
+.footer_phone,
+.footer_mail {
+  display: flex;
+}
+.footer_phone {
+  margin: 0 0 25px 0;
+}
+.contect_area {
+  margin: 50px 150px 0 0;
+}
+.footer_phone img,
+.footer_mail img {
+  width: 50px;
+  height: 50px;
+  padding: 10px 20px 5px 0;
 }
 .footer_box {
   display: flex;
