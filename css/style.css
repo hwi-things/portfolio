@@ -19,8 +19,6 @@ body::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/*스크롤바 뒷 배경 색상*/
-
 /* header */
 header {
   position: absolute;
@@ -155,6 +153,9 @@ header.sticky {
     right: -15%;
   }
 }
+.main_left {
+  min-width: 535px;
+}
 .main_left h2 {
   font-weight: 700;
   font-size: 50px;
@@ -199,8 +200,14 @@ left: 0;
 .lego img:first-child {
   padding: 0px;
 }
-.main_me {
+.main_right {
+  position: relative;
+  left: 3%;
+  width: 100%;
   z-index: 221;
+}
+.main_me {
+  width: 84%;
 }
 #sec_main p {
   font-family: "KoreanNGDM";
@@ -903,3 +910,99 @@ footer span + p {
   font-size: 3em;
   z-index: 999;
 } */
+
+/* ===========
+  MEDIA QUERY
+============= */
+@media screen and (max-width: 1170px) {
+  #sec_main p {
+    font-family: "KoreanNGDM";
+    font-size: 25px;
+    line-height: 70px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #sec_project4::before,
+  #sec_project4::after, .project_tit + p,.profile_txt_center, .profile_txt_right,.profile_box2,#sec_main .main_subtit_top::after,#sec_main .container::after,#sec_main .button_r::after,#sec_main .container::before {
+    display: none;
+  }
+  #sec_main p {
+    font-size: 21px;
+    line-height: 65px;
+    text-align: center;
+  }
+  #sec_main::after {
+    top: 92%;
+}
+  .main_subtit_bottom span {
+    font-size: 37px;
+    line-height: 65px;
+    margin-right: 0;
+}
+  .main_subtit_bottom {
+    justify-content: center;
+}
+  #sec_profile .container {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.lego {
+  display: flex;
+  padding: 110px 0 0 0;
+  justify-content: center;
+}
+.profile_left {
+  width: 57%;}
+  .sills_area {
+    flex-direction: column;
+}
+.main_right {
+  position: absolute;
+  left: 8%;
+  top: 22%;
+  width: 100%;
+  z-index: 0;
+}
+#sec_profile .profile_right h2 {
+  margin: 50px 0 70px 0;
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "KoreanNGDL";
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0px;
+}
+  .project_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .project_left {
+    width: 300px;
+  }
+  .button_r,
+  .button_w {
+    position: relative;
+    top: 48%;
+    left: 26%;  }
+  .project_right {
+    width: 400px;
+  }
+  .project_left,
+  .project_right {
+    padding-top: 50px;
+  }
+  .project_right p:nth-child(3) {
+    display: none;
+  }
+  #sec_project4 .project_txt {
+    font-size: 13px;
+    margin: 15px 0;
+}
+footer{
+}
+
+}
+

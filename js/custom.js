@@ -13,59 +13,61 @@ $(function () {
 });
 
 //gnb
-let win = window,
-  winSct,
-  sections = document.querySelectorAll("section"),
-  gnb = document.querySelectorAll(".gnb li");
+$(function () {
+  let win = window,
+    winSct,
+    sections = document.querySelectorAll(".section"),
+    gnb = document.querySelectorAll(".gnb li");
 
-const gnbOff = () => {
-  gnb.forEach((o) => {
-    o.classList.remove("on");
+  const gnbOff = () => {
+    gnb.forEach((o) => {
+      o.classList.remove("on");
+    });
+  };
+
+  gnb.forEach((el) => {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      document
+        .querySelector(el.firstChild.getAttribute("href"))
+        .scrollIntoView({ behavior: "smooth" });
+      gnbOff();
+      el.classList.add("on");
+    });
   });
-};
 
-gnb.forEach((el) => {
-  el.addEventListener("click", function (e) {
+  win.addEventListener("scroll", function (e) {
     e.preventDefault();
-    document
-      .querySelector(el.firstChild.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-    gnbOff();
-    el.classList.add("on");
+    winSct = this.scrollY;
+    winSct >= 400
+      ? document.querySelector("header").classList.add("sticky")
+      : document.querySelector("header").classList.remove("sticky");
+    scrollGnbOn(winSct);
   });
-});
 
-win.addEventListener("scroll", function (e) {
-  e.preventDefault();
-  winSct = this.scrollY;
-  winSct >= 400
-    ? document.querySelector("header").classList.add("sticky")
-    : document.querySelector("header").classList.remove("sticky");
-  scrollGnbOn(winSct);
+  const scrollGnbOn = (sct) => {
+    if (sct >= sections[0].offsetTop - 300) {
+      gnbOff();
+      document.querySelector(".gnb li:nth-child(1)").classList.add("on");
+    }
+    if (sct >= sections[1].offsetTop - 300) {
+      gnbOff();
+      document.querySelector(".gnb li:nth-child(2)").classList.add("on");
+    }
+    if (sct >= sections[2].offsetTop - 300) {
+      gnbOff();
+      document.querySelector(".gnb li:nth-child(3)").classList.add("on");
+    }
+    if (sct >= sections[3].offsetTop - 300) {
+      gnbOff();
+      document.querySelector(".gnb li:nth-child(4)").classList.add("on");
+    }
+    if (sct >= sections[8].offsetTop - 300) {
+      gnbOff();
+      document.querySelector(".gnb li:nth-child(5)").classList.add("on");
+    }
+  };
 });
-
-const scrollGnbOn = (sct) => {
-  if (sct >= sections[0].offsetTop - 300) {
-    gnbOff();
-    document.querySelector(".gnb li:nth-child(1)").classList.add("on");
-  }
-  if (sct >= sections[1].offsetTop - 300) {
-    gnbOff();
-    document.querySelector(".gnb li:nth-child(2)").classList.add("on");
-  }
-  if (sct >= sections[2].offsetTop - 300) {
-    gnbOff();
-    document.querySelector(".gnb li:nth-child(3)").classList.add("on");
-  }
-  if (sct >= sections[3].offsetTop - 300) {
-    gnbOff();
-    document.querySelector(".gnb li:nth-child(4)").classList.add("on");
-  }
-  if (sct >= sections[4].offsetTop - 300) {
-    gnbOff();
-    document.querySelector(".gnb li:nth-child(5)").classList.add("on");
-  }
-};
 
 // skills
 
