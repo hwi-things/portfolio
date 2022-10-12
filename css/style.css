@@ -145,14 +145,14 @@ header.sticky {
   /* background: rgba(217, 217, 217, 0.6); */
   background: url(../images/main_lego_bg2.png) no-repeat;
   background-size: contain;
-  animation: 2s linear 1s infinite alternate main_right;
+  animation: 4s linear 1s infinite alternate main_right;
 }
 @keyframes main_right {
   from {
     right: -40%;
   }
   to {
-    right: -20%;
+    right: -15%;
   }
 }
 .main_left h2 {
