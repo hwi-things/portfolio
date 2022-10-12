@@ -1,27 +1,25 @@
 /* 임의의 영역 생성 */
-body { 
+body {
   overflow-x: hidden;
 }
 
 /* 아래의 모든 코드는 영역::코드로 사용 */
 
 body::-webkit-scrollbar {
-    width: 10px;  /* 스크롤바의 너비 */
-    background: transparent;
+  width: 10px; /* 스크롤바의 너비 */
+  background: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
-    height: 10%;
-    background: #a8a8a8; 
-border-radius: 10px;
+  height: 10%;
+  background: #a8a8a8;
+  border-radius: 10px;
 }
 body::-webkit-scrollbar-track {
-    background: transparent;  
-  }
-  
-  /*스크롤바 뒷 배경 색상*/
+  background: transparent;
+}
 
-
+/*스크롤바 뒷 배경 색상*/
 
 /* header */
 header {
@@ -486,7 +484,7 @@ left: 0;
 }
 .skill_name {
   position: absolute;
-  top: -30px;
+  top: -20px;
   left: 3px;
   color: #fff;
 }
@@ -515,7 +513,7 @@ left: 0;
 }
 .progress-bar .rate {
   position: absolute;
-  top: -30px;
+  top: -26px;
   right: 3px;
   bottom: 0;
   line-height: 30px;
@@ -774,7 +772,7 @@ left: 0;
 #sec_project4.on::before {
   left: -1%;
 }
-#sec_project4.on::after{
+#sec_project4.on::after {
   right: -1%;
 }
 
