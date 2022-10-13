@@ -470,6 +470,9 @@ left: 0;
 .profile_right {
   width: 60%;
 }
+
+
+
 /* sec_skills */
 #sec_skills {
   background: #ea4343 url(../images/skills_bg2.png) no-repeat center;
@@ -659,6 +662,8 @@ left: 0;
   background: tomato;
   overflow: hidden;
   border-radius: 9px;
+  transition: all 5s ease;
+
 }
 
 /* sec_project2 */
@@ -966,7 +971,7 @@ footer span + p {
 }
 #sec_profile .profile_right h2 {
   margin: 50px 0 70px 0;
-  font-size: 19px;
+  font-size: 17px;
   color: rgba(255, 255, 255, 0.8);
   font-family: "KoreanNGDL";
   font-weight: 400;
@@ -1000,8 +1005,6 @@ footer span + p {
   #sec_project4 .project_txt {
     font-size: 13px;
     margin: 15px 0;
-}
-footer{
 }
 
 }
