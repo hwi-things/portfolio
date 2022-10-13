@@ -244,7 +244,7 @@ left: 0;
   width: 130px;
   height: 35px;
   border-radius: 35px;
-  background: #f4f5fe;
+  background: #ffffff;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   font-family: "KoreanNGDB";
   font-size: 14px;
@@ -279,11 +279,11 @@ left: 0;
 }
 
 .button_r a:hover {
-  animation: to-lego 1s ease;
+  animation: to-lego 0.8s ease;
   animation-fill-mode: both;
 }
 .button_w a:hover {
-  animation: to-lego 1s ease;
+  animation: to-lego 0.8s ease;
   animation-fill-mode: both;
   background: #ea4343;
   color: #fff;
@@ -307,7 +307,7 @@ left: 0;
   content: "";
   display: inline-block;
   background: #ea4343;
-  transition: transform 1s ease;
+  transition: transform 0.8s ease;
   transform: translateY(9px) scale(0);
   z-index: -1;
 }
@@ -637,6 +637,19 @@ left: 0;
 .icon li {
   margin-right: 20px;
 }
+#sec_project1 .frame_mobile .hidden {
+  width: 90px;
+  height: 197px;
+  top: 14px;
+  left: 15px;
+  position: absolute;
+  display: block;
+  background: tomato;
+  overflow: hidden;
+  border-radius: 9px;
+  transition: all 5s ease;
+
+}
 #sec_project1 .frame_mobile img {
   position: absolute;
   width: 100%;
@@ -652,19 +665,6 @@ left: 0;
   transition-duration: 5s;
 }
 
-#sec_project1 .frame_mobile .hidden {
-  width: 90px;
-  height: 197px;
-  top: 14px;
-  left: 15px;
-  position: absolute;
-  display: block;
-  background: tomato;
-  overflow: hidden;
-  border-radius: 9px;
-  transition: all 5s ease;
-
-}
 
 /* sec_project2 */
 #sec_project2 {
