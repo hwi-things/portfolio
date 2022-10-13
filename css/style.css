@@ -463,8 +463,8 @@ left: 0;
   margin-right: 10px;
 }
 .profile_edu_area .profile_date p:nth-child(1),
-.profile_his_area .profile_date p:nth-child(2),
-.profile_his_area .profile_date p:nth-child(3) {
+.profile_his_area .profile_date p:nth-child(1),
+.profile_his_area .profile_date p:nth-child(2) {
   padding-bottom: 30px;
 }
 .profile_right {
