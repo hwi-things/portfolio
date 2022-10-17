@@ -40,27 +40,11 @@
   font-family: "Josefin Sans", "KoreanNGDM", sans-serif;
   color: #3c3c3c;
   text-decoration: none;
-
 }
 html {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-/* body,
-h1,
-h2,
-h3,
-h4,
-p,
-a,
-input,
-label {
-  margin: 0;
-  padding: 0;
-  color: #3c3c3c;
-  font-family: "Josefin Sans", "KoreanNGDM", sans-serif;
-  text-decoration: none;
-} */
 ul,
 li,
 ol {

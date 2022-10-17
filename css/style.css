@@ -1,8 +1,9 @@
+/* scroll */
 body {
   overflow-x: hidden;
 }
 body::-webkit-scrollbar {
-  width: 10px; /* 스크롤바의 너비 */
+  width: 10px; 
   background: transparent;
 }
 body::-webkit-scrollbar-thumb {
@@ -356,6 +357,12 @@ left: 0;
 .profile_txt_area {
   display: flex;
 }
+.profile_txt_area p::selection, .profile_txt_area br::selection{
+  background: #ea4343;
+}
+.profile_txt_area h3::selection{
+  background: rgba(255, 255, 255, 0.8);
+}
 .profile_left {
   width: 33%;
   margin-top: 19vh;
@@ -427,6 +434,12 @@ left: 0;
   line-height: 35px;
   color: #ea4343;
   letter-spacing: 1.5px;
+}
+.profile_right h2::selection, .profile_right br::selection{
+  background: #ea4343;
+}
+.profile_right h2 span::selection{
+  background:rgba(255, 255, 255, 0.8);
 }
 .profile_right h2 span:last-child {
   color: rgba(255, 255, 255, 0.8);
@@ -906,6 +919,11 @@ footer span + p {
   opacity: 1;
 }
 
+/* .box {
+  position: fixed;
+  font-size: 3em;
+  z-index: 999;
+} */
 
 /* ===========
   MEDIA QUERY

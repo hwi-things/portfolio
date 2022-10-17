@@ -143,6 +143,14 @@ $(function () {
   });
 });
 
+$(window).scroll(function () {
+  let scrollTop = $(window).scrollTop();
+
+  //변수scrollTop의 값을 .box1에 출력하세요
+  //.box1 을 저장
+  //출력
+  $(".box").html("<p class='counter'>" + scrollTop);
+});
 
 //mockup_scroll
 $(function () {
