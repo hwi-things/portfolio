@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
 }
 body::-webkit-scrollbar {
-  width: 10px; 
+  width: 10px;
   background: transparent;
 }
 body::-webkit-scrollbar-thumb {
@@ -199,11 +199,12 @@ left: 0;
 .main_right {
   position: relative;
   left: 3%;
+  top: 18%;
   width: 100%;
   z-index: 221;
 }
 .main_me {
-  width: 84%;
+  width: 550px;
 }
 #sec_main p {
   font-family: "KoreanNGDM";
@@ -357,10 +358,11 @@ left: 0;
 .profile_txt_area {
   display: flex;
 }
-.profile_txt_area p::selection, .profile_txt_area br::selection{
+.profile_txt_area p::selection,
+.profile_txt_area br::selection {
   background: #ea4343;
 }
-.profile_txt_area h3::selection{
+.profile_txt_area h3::selection {
   background: rgba(255, 255, 255, 0.8);
 }
 .profile_left {
@@ -435,11 +437,12 @@ left: 0;
   color: #ea4343;
   letter-spacing: 1.5px;
 }
-.profile_right h2::selection, .profile_right br::selection{
+.profile_right h2::selection,
+.profile_right br::selection {
   background: #ea4343;
 }
-.profile_right h2 span::selection{
-  background:rgba(255, 255, 255, 0.8);
+.profile_right h2 span::selection {
+  background: rgba(255, 255, 255, 0.8);
 }
 .profile_right h2 span:last-child {
   color: rgba(255, 255, 255, 0.8);
@@ -478,8 +481,6 @@ left: 0;
 .profile_right {
   width: 60%;
 }
-
-
 
 /* sec_skills */
 #sec_skills {
@@ -656,7 +657,6 @@ left: 0;
   overflow: hidden;
   border-radius: 9px;
   transition: all 5s ease;
-
 }
 #sec_project1 .frame_mobile img {
   position: absolute;
@@ -673,7 +673,6 @@ left: 0;
   left: -9%;
   /* transition-duration: 3s; */
 }
-
 
 /* sec_project2 */
 #sec_project2 {
@@ -928,16 +927,129 @@ footer span + p {
 /* ===========
   MEDIA QUERY
 ============= */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1400px) {
+  section {
+    height: 900px;
+  }
+  #sec_main {
+    height: 970px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  #sec_main .container::before {
+    display: none;
+  }
+
+  .lego {
+    justify-content: center;
+  }
   #sec_main p {
     font-family: "KoreanNGDM";
     font-size: 25px;
-    line-height: 70px;
+    text-align: center;
+  }
+  .main_subtit_bottom {
+    justify-content: center;
+  }
+  #sec_main .button_r {
+    justify-content: center;
+  }
+  .main_me {
+    width: 550px;
+  }
+}
+@media screen and (max-width: 1127px) {
+  .main_right {
+    left: -2%;
+    top: 22%;
+  }
+  .main_me {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1020px){
+  #sec_profile .profile_right h2 {
+    margin: 60px 0 50px 0;
+    font-size: 20px;
+  }
+  .profile_left {
+    width: 35%;
+    margin-top: 22vh;
+    margin-right: 50px;
+    left: -3%;
+}
+.profile_box2 {
+  left: 49%;
+  top: 51%;
+  z-index: 5;
+}
+
+}
+@media screen and (max-width: 955px) {
+  .lego {
+    justify-content: flex-end;
+    padding: 276px 40px 20px 0;
+  }
+  .main_right {
+    left: -6%;
+    top: 29%;
+  }
+  .main_me {
+    width: 400px;
+  }
+  #sec_main .container::after {
+    left: 62%;
+  }
+  #sec_main p {
+    font-size: 23px;
+    text-align: right;
+  }
+  .main_subtit_bottom span {
+    font-size: 40px;
+  }
+  .main_subtit_bottom {
+    justify-content: flex-end;
+  }
+  #sec_main .button_r {
+    margin-left: 150px;
+  }
+  #sec_profile p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 882px) {
+  #sec_main .container::after {
+    width: 500px;
+    height: 500px;
+    left: 64%;
+    top: 268px;
+  }
+  .profile_box2 {
+    left: 42%;
+}
+  #sec_main .main_subtit_top::after {
+    display: none;
+  }
+  .main_right {
+    left: -10%;
+    top: 36%;
+  }
+  .main_me {
+    width: 350px;
   }
 }
 @media screen and (max-width: 500px) {
   #sec_project4::before,
-  #sec_project4::after, .project_tit + p,.profile_txt_center, .profile_txt_right,.profile_box2,#sec_main .main_subtit_top::after,#sec_main .container::after,#sec_main .button_r::after,#sec_main .container::before {
+  #sec_project4::after,
+  .project_tit + p,
+  .profile_txt_center,
+  .profile_txt_right,
+  .profile_box2,
+  #sec_main .main_subtit_top::after,
+  #sec_main .container::after,
+  #sec_main .button_r::after,
+  #sec_main .container::before {
     display: none;
   }
   #sec_main p {
@@ -947,46 +1059,47 @@ footer span + p {
   }
   #sec_main::after {
     top: 92%;
-}
+  }
   .main_subtit_bottom span {
     font-size: 37px;
     line-height: 65px;
     margin-right: 0;
-}
+  }
   .main_subtit_bottom {
     justify-content: center;
-}
+  }
   #sec_profile .container {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-.lego {
-  display: flex;
-  padding: 110px 0 0 0;
-  justify-content: center;
-}
-.profile_left {
-  width: 57%;}
+  }
+  .lego {
+    display: flex;
+    padding: 110px 0 0 0;
+    justify-content: center;
+  }
+  .profile_left {
+    width: 57%;
+  }
   .sills_area {
     flex-direction: column;
-}
-.main_right {
-  position: absolute;
-  left: 8%;
-  top: 22%;
-  width: 100%;
-  z-index: 0;
-}
-#sec_profile .profile_right h2 {
-  margin: 50px 0 70px 0;
-  font-size: 17px;
-  color: rgba(255, 255, 255, 0.8);
-  font-family: "KoreanNGDL";
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0px;
-}
+  }
+  .main_right {
+    position: absolute;
+    left: 8%;
+    top: 22%;
+    width: 100%;
+    z-index: 0;
+  }
+  #sec_profile .profile_right h2 {
+    margin: 50px 0 70px 0;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "KoreanNGDL";
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0px;
+  }
   .project_area {
     display: flex;
     flex-direction: column;
@@ -1000,7 +1113,8 @@ footer span + p {
   .button_w {
     position: relative;
     top: 48%;
-    left: 26%;  }
+    left: 26%;
+  }
   .project_right {
     width: 400px;
   }
@@ -1014,7 +1128,5 @@ footer span + p {
   #sec_project4 .project_txt {
     font-size: 13px;
     margin: 15px 0;
+  }
 }
-
-}
-
