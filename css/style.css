@@ -646,6 +646,31 @@ left: 0;
 .icon li {
   margin-right: 20px;
 }
+
+#sec_project1 .frame_pc .hidden {
+  width: 459px;
+  height: 258px;
+  top: 22px;
+  left: 21px;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  transition: all 4s ease;
+}
+#sec_project1 .frame_pc a img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition-property: top;
+  transition-duration: 2s;
+}
+#sec_project1 .frame_pc {
+  /* position: absolute; */
+  max-width: 120px;
+  width: 100%;
+  top: 52%;
+  left: -9%;
+}
 #sec_project1 .frame_mobile .hidden {
   width: 90px;
   height: 197px;
@@ -699,16 +724,86 @@ left: 0;
   left: 0;
   animation: fade 2s ease-in;
 }
-
-#sec_project2 .thumbnail_area {
-  text-align: right;
-}
 #sec_project2 .thumbnail_area .mobile {
   top: 50%;
   left: 15%;
 }
 #sec_project2 .thumbnail_area .ipad {
-  left: 74%;
+  left: 80%;
+}
+#sec_project2 .frame_pc .hidden {
+  width: 458px;
+  height: 258px;
+  top: 22px;
+  left: 22px;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  transition: all 2s ease;
+}
+#sec_project2 .frame_pc a img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition-property: top;
+  transition-duration: 2s;
+}
+#sec_project2 .frame_pc {
+  max-width: 120px;
+  width: 100%;
+  top: 52%;
+  left: 26%;
+  position: relative;
+}
+#sec_project2 .frame_ipad .hidden {
+  width: 249px;
+  height: 187px;
+  top: 17px;
+  left: 139px;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  border-radius: 7px;
+  transition: all 2s ease;
+}
+#sec_project2 .frame_ipad a img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition-property: top;
+  transition-duration: 7s;
+}
+#sec_project2 .frame_ipad {
+  max-width: 120px;
+  width: 100%;
+  top: 53%;
+  left: 63%;
+  position: absolute;
+}
+#sec_project2 .frame_mobile .hidden {
+  width: 86px;
+  height: 198px;
+  top: 14px;
+  left: 35px;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 5s ease;
+}
+#sec_project2 .frame_mobile img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition-property: top;
+  transition-duration: 3s;
+}
+#sec_project2 .frame_mobile {
+  position: absolute;
+  max-width: 120px;
+  width: 100%;
+  top: 53%;
+  left: 15%;
 }
 
 /* sec_project3 */
