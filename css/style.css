@@ -653,7 +653,6 @@ left: 0;
   left: 15px;
   position: absolute;
   display: block;
-  background: tomato;
   overflow: hidden;
   border-radius: 9px;
   transition: all 5s ease;
@@ -671,7 +670,6 @@ left: 0;
   width: 100%;
   top: 52%;
   left: -9%;
-  /* transition-duration: 3s; */
 }
 
 /* sec_project2 */
@@ -696,7 +694,6 @@ left: 0;
 #sec_project2 .project_right {
   position: relative;
   left: -80%;
-  padding-left: 50px;
 }
 #sec_project2.on .project_right {
   left: 0;
@@ -707,8 +704,11 @@ left: 0;
   text-align: right;
 }
 #sec_project2 .thumbnail_area .mobile {
-  top: 47%;
-  left: 22%;
+  top: 50%;
+  left: 15%;
+}
+#sec_project2 .thumbnail_area .ipad {
+  left: 74%;
 }
 
 /* sec_project3 */
@@ -740,32 +740,65 @@ left: 0;
   left: 64%;
 }
 
+#sec_project3 .frame_pc .hidden {
+  width: 458px;
+  height: 258px;
+  top: 22px;
+  left: 22px;  position: absolute;
+  display: block;
+  overflow: hidden;
+  transition: all 2s ease;
+}
+#sec_project3 .frame_pc a img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition-property: top;
+  transition-duration: 2s;
+}
+#sec_project3 .frame_pc {
+  /* position: absolute; */
+  max-width: 120px;
+  width: 100%;
+  top: 52%;
+  left: -9%;
+}
+
 /* sec_project4 */
-#sec_project4 {
+
+#sec_project4 .project_left {
+  text-align: right;
+}
+#sec_project4 .project_left .mobile {
+  left: 19%;
+}
+
+/* sec_project5 */
+#sec_project5 {
   background-color: #ea4343;
   position: relative;
 }
-#sec_project4 .thumbnail_area .mobile:first-child {
+#sec_project5 .thumbnail_area .mobile:first-child {
   width: 45%;
   margin-left: 36%;
 }
-#sec_project4 .thumbnail_area .mobile:last-child {
+#sec_project5 .thumbnail_area .mobile:last-child {
   width: 32%;
   margin-top: 16%;
   left: -6%;
 }
-#sec_project4 h3 {
+#sec_project5 h3 {
   color: #ffffff;
 }
-#sec_project4 h3 span {
+#sec_project5 h3 span {
   color: #ffffff;
   font-size: 23px;
   font-family: "KoreanNGDM";
 }
-#sec_project4 .project_txt {
+#sec_project5 .project_txt {
   color: #f5f5f5;
 }
-#sec_project4::before {
+#sec_project5::before {
   content: "";
   position: absolute;
   top: 54%;
@@ -777,7 +810,7 @@ left: 0;
   border-radius: 0px;
   transition: all 01s ease-in;
 }
-#sec_project4::after {
+#sec_project5::after {
   content: "";
   position: absolute;
   top: 12%;
@@ -789,33 +822,23 @@ left: 0;
   border-radius: 0px;
   transition: all 01s ease-in;
 }
-#sec_project4.on::before {
+#sec_project5.on::before {
   left: -1%;
 }
-#sec_project4.on::after {
+#sec_project5.on::after {
   right: -1%;
 }
 
-#sec_project4 .button_w a:hover {
+#sec_project5 .button_w a:hover {
   animation: to-lego 1s ease;
   animation-fill-mode: both;
   background: #ffffff;
   color: #3c3c3c;
 }
 
-#sec_project4 .button_w a:before,
-#sec_project4 .button_w a:after {
+#sec_project5 .button_w a:before,
+#sec_project5 .button_w a:after {
   background: #ffffff;
-}
-
-/* sec_project5 */
-#sec_project5 {
-  background-color: #f4f5fe;
-  display: none;
-}
-#sec_project5 .project_tit,
-#sec_project5 .project_tit + p {
-  text-align: right;
 }
 
 /* footer */
@@ -968,7 +991,7 @@ footer span + p {
     width: 450px;
   }
 }
-@media screen and (max-width: 1020px){
+@media screen and (max-width: 1020px) {
   #sec_profile .profile_right h2 {
     margin: 60px 0 50px 0;
     font-size: 20px;
@@ -978,13 +1001,12 @@ footer span + p {
     margin-top: 22vh;
     margin-right: 50px;
     left: -3%;
-}
-.profile_box2 {
-  left: 49%;
-  top: 51%;
-  z-index: 5;
-}
-
+  }
+  .profile_box2 {
+    left: 49%;
+    top: 51%;
+    z-index: 5;
+  }
 }
 @media screen and (max-width: 955px) {
   .lego {
@@ -1027,7 +1049,7 @@ footer span + p {
   }
   .profile_box2 {
     left: 42%;
-}
+  }
   #sec_main .main_subtit_top::after {
     display: none;
   }
@@ -1040,8 +1062,8 @@ footer span + p {
   }
 }
 @media screen and (max-width: 500px) {
-  #sec_project4::before,
-  #sec_project4::after,
+  #sec_project5::before,
+  #sec_project5::after,
   .project_tit + p,
   .profile_txt_center,
   .profile_txt_right,
@@ -1125,7 +1147,7 @@ footer span + p {
   .project_right p:nth-child(3) {
     display: none;
   }
-  #sec_project4 .project_txt {
+  #sec_project5 .project_txt {
     font-size: 13px;
     margin: 15px 0;
   }
