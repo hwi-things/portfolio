@@ -137,8 +137,11 @@ $(function () {
     if (sct >= 2600) {
       $("#sec_project1").addClass("on");
     }
-    if (sct >= 5700) {
+    if (sct >= 5530) {
       $("#sec_project4").addClass("on");
+    }
+    if (sct >= 6700) {
+      $("#sec_project5").addClass("on");
     }
   });
 });
